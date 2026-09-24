@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Wacaco Prestina sellada en Chile. Prensa de viaje por inmersión, taza limpia, lista para retirar.">
+  <meta name="description" content="Wacaco Prestina sellada en Chile. Prensa de viaje por inmersión, taza limpia.">
   <title>Prestina — Wacaco | Chile</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,97 +17,83 @@
   </header>
 
   <main id="inicio">
+    <!-- Split buy hero -->
     <section class="hero wrap">
       <div class="hero-gallery">
-        <div class="hero-stage" id="hero-stage">
+        <div class="hero-stage is-dark">
           <picture>
             <source srcset="assets/hero-prestina.webp" type="image/webp">
-            <img id="hero-main" src="assets/hero-prestina.gif" alt="Wacaco Prestina" width="460" height="818">
+            <img src="assets/hero-prestina.gif" alt="Wacaco Prestina animada" width="460" height="818">
           </picture>
         </div>
-        <div class="thumbs" role="list">
-          <button type="button" class="thumb is-active" data-src="assets/hero-prestina.webp" data-fallback="assets/hero-prestina.gif" data-type="anim" aria-label="Ver animación">
-            <img src="assets/set-product.jpg" alt="">
-          </button>
-          <button type="button" class="thumb" data-src="assets/set-kit.jpg" data-fallback="assets/set-kit.jpg" data-type="still" aria-label="Ver kit completo">
-            <img src="assets/set-kit.jpg" alt="">
-          </button>
-          <button type="button" class="thumb" data-src="assets/set-steps.png" data-fallback="assets/set-steps.png" data-type="still" aria-label="Ver pasos">
-            <img src="assets/set-steps.png" alt="">
-          </button>
-        </div>
       </div>
-
       <div class="hero-buy">
-        <p class="eyebrow">Portable coffee press · Chile</p>
+        <p class="eyebrow">Wacaco · disponible en Chile</p>
         <h1>Prestina</h1>
-        <p class="lede">Prensa de viaje Wacaco: inmersión simple, taza limpia, sin lodito de la prensa clásica. Unidades selladas.</p>
+        <p class="lede">Prensa de viaje: inmersión simple, taza limpia, sin el lodito de la prensa clásica. Unidades selladas.</p>
         <p class="price">$50.000 <small>CLP</small></p>
-        <p class="stock">Stock limitado · 2 unidades · selladas</p>
+        <p class="stock">Stock limitado · 2 unidades</p>
         <a class="button button--orange" href="https://wa.me/56951774751?text=Hola%2C%20me%20interesa%20la%20Prestina">Consultar por WhatsApp</a>
-        <p class="fine-print">Pyme local. Te respondo por WhatsApp para coordinar. Sin carrito online.</p>
-        <ul class="mini-benefits">
-          <li>Molienda gruesa (tipo French press)</li>
-          <li>Filtro de acero · menos lodito</li>
-          <li>Lista en ~2 minutos</li>
-        </ul>
+        <p class="fine-print">Pyme local. Coordinamos por WhatsApp. Sin carrito online.</p>
       </div>
     </section>
 
+    <!-- Café por inmersión: text + product SIDE BY SIDE -->
+    <section class="feature feature--split wrap">
+      <div class="feature-copy">
+        <p class="eyebrow">Wacaco · disponible en Chile</p>
+        <h2 class="display">Café por<br><em>inmersión.</em></h2>
+        <p>La Prestina lleva el ritual de una prensa a tu próxima pausa: simple, limpia y sin apuro.</p>
+        <a class="text-link" href="#pasos">Conocer la Prestina <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="feature-media feature-media--product">
+        <picture>
+          <source srcset="assets/hero-prestina.webp" type="image/webp">
+          <img src="assets/hero-product-still.png" alt="Prestina lista para preparar" width="460" height="500">
+        </picture>
+      </div>
+    </section>
+
+    <!-- Sabor de la simplicidad — full editorial graphic -->
+    <section class="band band--cream">
+      <div class="wrap band-inner">
+        <img class="editorial" src="assets/feat-simplicidad.png" alt="El sabor de la simplicidad: agrega café, agua caliente, espera y presiona">
+      </div>
+    </section>
+
+    <!-- Todo en uno — Wacaco legend card -->
+    <section class="band">
+      <div class="wrap band-inner">
+        <img class="editorial" src="assets/feat-todo-en-uno.png" alt="Diseño compacto: todo en uno, listo para preparar">
+      </div>
+    </section>
+
+    <!-- Filtro / menos desperdicio -->
+    <section class="band band--cream">
+      <div class="wrap band-inner">
+        <img class="editorial" src="assets/feat-filtro.png" alt="Filtro reutilizable: prácticamente sin sedimentos">
+      </div>
+    </section>
+
+    <!-- Pasos oficiales -->
+    <section class="band band--sage" id="pasos">
+      <div class="wrap band-inner">
+        <img class="editorial" src="assets/feat-pasos.png" alt="Instrucciones: prepara y limpia en 2 minutos">
+      </div>
+      <p class="recipe wrap">Punto de partida en casa: ~15 g · 240 ml · ~94 °C · molienda gruesa. Ajusta a gusto.</p>
+    </section>
+
+    <!-- Short why / local -->
     <section class="story wrap">
-      <h2>Sin émbolo complicado.<br><em>Solo buen café.</em></h2>
-      <p>Prestina repensa la prensa: agregas café, agua caliente, esperas un momento y presionas. Formato compacto para casa, oficina o viaje.</p>
-    </section>
-
-    <section class="benefits wrap" aria-label="Beneficios">
-      <article>
-        <h3>Prensa de viaje</h3>
-        <p>Inmersión en un formato compacto. Todo viaja junto.</p>
-      </article>
-      <article>
-        <h3>Molienda gruesa</h3>
-        <p>Tipo French press. No necesitas un molino specialty.</p>
-      </article>
-      <article>
-        <h3>Taza limpia</h3>
-        <p>Filtro de acero permanente: más cuerpo, menos lodito.</p>
-      </article>
-      <article>
-        <h3>Rápida de usar</h3>
-        <p>Preparar y limpiar en unos minutos. Ritual simple.</p>
-      </article>
-    </section>
-
-    <section class="media-block">
-      <div class="wrap media-frame media-frame--light">
-        <img src="assets/set-kit.jpg" alt="Prestina y todo lo que incluye el kit" width="1290" height="1358">
-      </div>
-      <p class="media-caption wrap">Todo en uno: prensa, vaso, filtro, cuchara y funda.</p>
-    </section>
-
-    <section class="steps-block" id="pasos">
-      <div class="wrap">
-        <p class="eyebrow">Ritual</p>
-        <h2>Prepara y limpia<br><em>en 2 minutos.</em></h2>
-        <ol class="steps-list">
-          <li><strong>Armado</strong> Coloca y prepara la Prestina.</li>
-          <li><strong>Café</strong> Molienda gruesa — sin molino de especialidad.</li>
-          <li><strong>Agua</strong> Vierte agua caliente, remueve suave e infusiona.</li>
-          <li><strong>Prensa</strong> Presiona con calma y disfruta.</li>
-        </ol>
-        <p class="recipe">Punto de partida: ~15 g · 240 ml · ~94 °C · molienda gruesa. Ajusta a gusto.</p>
-      </div>
-      <div class="wrap media-frame media-frame--dark">
-        <img src="assets/set-steps.png" alt="Infografía: prepara y limpia la Prestina en cuatro pasos" width="1280" height="720">
-      </div>
+      <h2>Para quien quiere<br><em>buena taza sin drama.</em></h2>
+      <p>Si te gusta el cuerpo de una prensa pero no el lodito, Prestina es el punto medio: inmersión, filtro de acero y un gesto simple. Ideal para escritorio, depto o llevarte el ritual a otro lado.</p>
     </section>
 
     <section class="offer wrap" id="contacto">
       <div class="offer-panel">
         <p class="eyebrow">Disponible en Chile</p>
         <h2>Prestina sellada</h2>
-        <p class="offer-meta">Wacaco · stock limitado · 2 unidades</p>
-        <p class="price price--light">$50.000 <small>CLP</small></p>
+        <p class="offer-meta">Wacaco · 2 unidades · $50.000 CLP</p>
         <a class="button button--orange" href="https://wa.me/56951774751?text=Hola%2C%20me%20interesa%20la%20Prestina">Escríbeme por WhatsApp</a>
       </div>
     </section>
@@ -127,32 +113,5 @@
       <a class="button button--orange button--compact" href="https://wa.me/56951774751?text=Hola%2C%20me%20interesa%20la%20Prestina">WhatsApp</a>
     </div>
   </div>
-
-  <script>
-    (function () {
-      var stage = document.getElementById('hero-stage');
-      var thumbs = document.querySelectorAll('.thumb');
-      thumbs.forEach(function (btn) {
-        btn.addEventListener('click', function () {
-          thumbs.forEach(function (t) { t.classList.remove('is-active'); });
-          btn.classList.add('is-active');
-          var type = btn.getAttribute('data-type');
-          var src = btn.getAttribute('data-src');
-          var fallback = btn.getAttribute('data-fallback');
-          if (type === 'anim') {
-            stage.innerHTML = '<picture><source srcset="' + src + '" type="image/webp"><img id="hero-main" src="' + fallback + '" alt="Wacaco Prestina" width="460" height="818"></picture>';
-            stage.classList.add('is-dark');
-          } else {
-            stage.innerHTML = '<img id="hero-main" src="' + src + '" alt="Wacaco Prestina" />';
-            stage.classList.toggle('is-dark', src.indexOf('steps') === -1 && src.indexOf('kit') === -1);
-            if (src.indexOf('kit') !== -1) stage.classList.remove('is-dark');
-            if (src.indexOf('steps') !== -1) { stage.classList.remove('is-dark'); stage.classList.add('is-sage'); }
-            else stage.classList.remove('is-sage');
-          }
-        });
-      });
-      stage.classList.add('is-dark');
-    })();
-  </script>
 </body>
 </html>
