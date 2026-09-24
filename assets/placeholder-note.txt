@@ -1,0 +1,1 @@
+Placeholder assets are represented by CSS blocks until real photos are added. See ../README.md.
