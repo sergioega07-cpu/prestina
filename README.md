@@ -1,16 +1,10 @@
-# Prestina / Wacaco — landing
+# Prestina / Wacaco — landing (Chile pyme)
 
-Landing estática en GitHub Pages. Sin carrito ni pagos.
+Inspirada en la lógica de wacaco.com/products/prestina, simplificada para reventa local.
 
 Sitio: https://sergioega07-cpu.github.io/prestina/
 
-## Assets
-
-- `assets/hero-prestina.webp` (+ `.gif` fallback) — animación hero (obligatoria)
-- `assets/set-kit.jpg` — kit / flat lay
-- `assets/set-steps.png` — prepara y limpia
-- `assets/set-product.jpg` — still de producto
-
-## WhatsApp
-
-CTA: `https://wa.me/56951774751`
+- Hero con animación del producto
+- Beneficios cortos
+- Imágenes completas (kit + pasos + producto), sin mosaico recortado
+- CTA WhatsApp: https://wa.me/56951774751
