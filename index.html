@@ -17,32 +17,48 @@
   </header>
 
   <main id="inicio">
-    <!-- Hero: product-first like Wacaco, local CTA -->
-    <section class="hero">
-      <div class="hero-visual">
-        <picture>
-          <source srcset="assets/hero-prestina.webp" type="image/webp">
-          <img src="assets/hero-prestina.gif" alt="Wacaco Prestina" width="460" height="818">
-        </picture>
-      </div>
-      <div class="hero-copy wrap">
-        <p class="eyebrow">Portable coffee press · Chile</p>
-        <h1>Prestina</h1>
-        <p class="lede">Prensa de viaje Wacaco: inmersión simple, taza limpia, sin lodito de la prensa clásica. Unidades selladas, stock limitado.</p>
-        <div class="hero-actions">
-          <a class="button" href="#contacto">Consultar por WhatsApp</a>
-          <p class="price-inline">$50.000 CLP · 2 disponibles</p>
+    <section class="hero wrap">
+      <div class="hero-gallery">
+        <div class="hero-stage" id="hero-stage">
+          <picture>
+            <source srcset="assets/hero-prestina.webp" type="image/webp">
+            <img id="hero-main" src="assets/hero-prestina.gif" alt="Wacaco Prestina" width="460" height="818">
+          </picture>
+        </div>
+        <div class="thumbs" role="list">
+          <button type="button" class="thumb is-active" data-src="assets/hero-prestina.webp" data-fallback="assets/hero-prestina.gif" data-type="anim" aria-label="Ver animación">
+            <img src="assets/set-product.jpg" alt="">
+          </button>
+          <button type="button" class="thumb" data-src="assets/set-kit.jpg" data-fallback="assets/set-kit.jpg" data-type="still" aria-label="Ver kit completo">
+            <img src="assets/set-kit.jpg" alt="">
+          </button>
+          <button type="button" class="thumb" data-src="assets/set-steps.png" data-fallback="assets/set-steps.png" data-type="still" aria-label="Ver pasos">
+            <img src="assets/set-steps.png" alt="">
+          </button>
         </div>
       </div>
+
+      <div class="hero-buy">
+        <p class="eyebrow">Portable coffee press · Chile</p>
+        <h1>Prestina</h1>
+        <p class="lede">Prensa de viaje Wacaco: inmersión simple, taza limpia, sin lodito de la prensa clásica. Unidades selladas.</p>
+        <p class="price">$50.000 <small>CLP</small></p>
+        <p class="stock">Stock limitado · 2 unidades · selladas</p>
+        <a class="button button--orange" href="https://wa.me/56951774751?text=Hola%2C%20me%20interesa%20la%20Prestina">Consultar por WhatsApp</a>
+        <p class="fine-print">Pyme local. Te respondo por WhatsApp para coordinar. Sin carrito online.</p>
+        <ul class="mini-benefits">
+          <li>Molienda gruesa (tipo French press)</li>
+          <li>Filtro de acero · menos lodito</li>
+          <li>Lista en ~2 minutos</li>
+        </ul>
+      </div>
     </section>
 
-    <!-- Short story -->
     <section class="story wrap">
       <h2>Sin émbolo complicado.<br><em>Solo buen café.</em></h2>
-      <p>Prestina repensa la prensa: agregas café, agua caliente, esperas un momento y presionas. Formato compacto para casa, oficina o viaje. Ideal si te gusta el cuerpo de una prensa pero quieres una taza más limpia.</p>
+      <p>Prestina repensa la prensa: agregas café, agua caliente, esperas un momento y presionas. Formato compacto para casa, oficina o viaje.</p>
     </section>
 
-    <!-- Benefits — Wacaco feature rhythm, our locked angles -->
     <section class="benefits wrap" aria-label="Beneficios">
       <article>
         <h3>Prensa de viaje</h3>
@@ -62,7 +78,6 @@
       </article>
     </section>
 
-    <!-- Full images, one per section — no cropped mosaic -->
     <section class="media-block">
       <div class="wrap media-frame media-frame--light">
         <img src="assets/set-kit.jpg" alt="Prestina y todo lo que incluye el kit" width="1290" height="1358">
@@ -87,21 +102,13 @@
       </div>
     </section>
 
-    <section class="media-block media-block--product">
-      <div class="wrap media-frame media-frame--black">
-        <img src="assets/set-product.jpg" alt="Prestina ensamblada" width="460" height="818">
-      </div>
-    </section>
-
-    <!-- Offer / contact — PYME commerce -->
     <section class="offer wrap" id="contacto">
       <div class="offer-panel">
         <p class="eyebrow">Disponible en Chile</p>
         <h2>Prestina sellada</h2>
         <p class="offer-meta">Wacaco · stock limitado · 2 unidades</p>
-        <p class="price">$50.000 <small>CLP</small></p>
-        <a class="button button--inverse" href="https://wa.me/56951774751?text=Hola%2C%20me%20interesa%20la%20Prestina">Escríbeme por WhatsApp</a>
-        <p class="fine-print">Pyme local: te respondo por WhatsApp para coordinar. Sin carrito online.</p>
+        <p class="price price--light">$50.000 <small>CLP</small></p>
+        <a class="button button--orange" href="https://wa.me/56951774751?text=Hola%2C%20me%20interesa%20la%20Prestina">Escríbeme por WhatsApp</a>
       </div>
     </section>
   </main>
@@ -110,5 +117,42 @@
     <p>Prestina / Wacaco · Chile</p>
     <p>No somos la tienda oficial Wacaco · reventa local</p>
   </footer>
+
+  <div class="sticky-bar" role="region" aria-label="Compra rápida">
+    <div class="sticky-inner">
+      <div>
+        <strong>Prestina</strong>
+        <span>$50.000 CLP · 2 uds</span>
+      </div>
+      <a class="button button--orange button--compact" href="https://wa.me/56951774751?text=Hola%2C%20me%20interesa%20la%20Prestina">WhatsApp</a>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var stage = document.getElementById('hero-stage');
+      var thumbs = document.querySelectorAll('.thumb');
+      thumbs.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          thumbs.forEach(function (t) { t.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+          var type = btn.getAttribute('data-type');
+          var src = btn.getAttribute('data-src');
+          var fallback = btn.getAttribute('data-fallback');
+          if (type === 'anim') {
+            stage.innerHTML = '<picture><source srcset="' + src + '" type="image/webp"><img id="hero-main" src="' + fallback + '" alt="Wacaco Prestina" width="460" height="818"></picture>';
+            stage.classList.add('is-dark');
+          } else {
+            stage.innerHTML = '<img id="hero-main" src="' + src + '" alt="Wacaco Prestina" />';
+            stage.classList.toggle('is-dark', src.indexOf('steps') === -1 && src.indexOf('kit') === -1);
+            if (src.indexOf('kit') !== -1) stage.classList.remove('is-dark');
+            if (src.indexOf('steps') !== -1) { stage.classList.remove('is-dark'); stage.classList.add('is-sage'); }
+            else stage.classList.remove('is-sage');
+          }
+        });
+      });
+      stage.classList.add('is-dark');
+    })();
+  </script>
 </body>
 </html>
