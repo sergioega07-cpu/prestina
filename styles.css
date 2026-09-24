@@ -244,23 +244,32 @@ h2 {
 
 .feature-media img {
   width: 100%;
-  max-width: 520px;
+  max-width: 560px;
   object-fit: contain;
 }
 
-/* Steps */
-.steps-section {
-  background: var(--green);
-  color: var(--cream);
-  padding: 2.6rem 0 2.8rem;
+.feature--reverse .feature-media img {
+  max-width: 640px;
 }
 
-.steps-section h2 { color: var(--cream); }
+/* Steps — cream band, muted opaque cards, centered smaller anims */
+.steps-section {
+  background: var(--cream);
+  color: var(--ink);
+  padding: 2.6rem 0 2.8rem;
+  border-top: 1px solid var(--line);
+}
+
+.steps-section h2 { color: var(--green); }
 
 .steps-lede {
-  color: #c9d0b8;
+  color: var(--muted);
   max-width: 32rem;
   margin: 0 0 1.5rem;
+}
+
+.steps-section .eyebrow--on-dark {
+  color: var(--orange);
 }
 
 .steps-grid {
@@ -270,32 +279,36 @@ h2 {
 }
 
 .step-card {
-  background: var(--black);
-  border-radius: 10px;
+  background: #3a4038;
+  border-radius: 12px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 10px 28px rgba(28, 31, 26, 0.08);
 }
 
 .step-media {
-  background: #000;
-  aspect-ratio: 600 / 900;
+  background: #3a4038;
+  aspect-ratio: 3 / 4;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1.1rem 0.85rem 0.4rem;
 }
 
 .step-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
+  width: auto;
+  height: auto;
+  max-width: 72%;
+  max-height: 88%;
+  object-fit: contain;
+  object-position: center center;
 }
 
 .step-meta {
-  padding: 0.85rem 0.9rem 1rem;
-  background: var(--black);
+  padding: 0.75rem 0.9rem 1rem;
+  background: #3a4038;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
@@ -325,36 +338,40 @@ h2 {
 .step-card p {
   margin: 0;
   font-size: 0.82rem;
-  color: #a8aea0;
+  color: #c4c9bb;
   line-height: 1.35;
 }
 
 .recipe {
   margin: 1.35rem 0 0;
-  color: #c9d0b8;
+  color: var(--muted);
   font-size: 0.88rem;
 }
 
-/* Closing */
+/* Closing — stays on cream for one continuous page feel */
 .closing {
-  background: var(--green);
-  color: var(--cream);
+  background: var(--cream);
+  color: var(--ink);
   padding: 2.8rem 0 3rem;
+  border-top: 1px solid var(--line);
 }
 
-.closing h2 { color: var(--cream); }
+.closing h2 { color: var(--green); }
+
+.closing .eyebrow--on-dark { color: var(--orange); }
 
 .closing-price {
   font-family: var(--serif);
   font-size: clamp(1.8rem, 6vw, 2.4rem);
   margin: 0 0 0.25rem;
+  color: var(--ink);
 }
 
 .closing-price small {
   font-family: var(--sans);
   font-size: 0.7rem;
   letter-spacing: 0.08em;
-  color: #9a998f;
+  color: var(--muted);
 }
 
 .why-list {
@@ -367,13 +384,13 @@ h2 {
 .why-list li {
   position: relative;
   padding: 0.65rem 0 0.65rem 1.15rem;
-  border-top: 1px solid rgba(242, 241, 235, 0.14);
-  color: #d5dcc8;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
   font-size: 0.98rem;
 }
 
 .why-list li:last-child {
-  border-bottom: 1px solid rgba(242, 241, 235, 0.14);
+  border-bottom: 1px solid var(--line);
 }
 
 .why-list li::before {
@@ -387,6 +404,10 @@ h2 {
   background: var(--orange);
 }
 
+.stock--on-dark { color: var(--green-soft); }
+.fine--on-dark { color: var(--muted); }
+
+/* Closing */
 .site-footer {
   display: flex;
   flex-wrap: wrap;
@@ -439,7 +460,13 @@ h2 {
   }
 
   .step-media {
-    aspect-ratio: 600 / 1000;
+    aspect-ratio: 3 / 4;
+    padding: 1.35rem 1rem 0.5rem;
+  }
+
+  .step-media img {
+    max-width: 68%;
+    max-height: 86%;
   }
 }
 
