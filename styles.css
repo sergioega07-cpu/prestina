@@ -495,3 +495,27 @@ h2 {
 
   .closing-inner { max-width: 40rem; }
 }
+
+/* «Volver a JINSEI»: franja discreta arriba (en el flujo, no tapa el header ni los CTA).
+   Solo existe si volver.js la agrega (visita desde ?desde=jinsei). */
+.volver {
+  background: #e8e6dc;
+  border-bottom: 1px solid var(--line);
+}
+.volver a {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  width: min(1080px, calc(100% - 2rem));
+  min-height: 36px;
+  margin: 0 auto;
+  color: var(--green-soft);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+.volver a:hover { color: var(--green); }
+.volver a:hover, .volver a:focus-visible { text-decoration: underline; text-underline-offset: 3px; }
+.volver a:focus-visible { outline: 2px solid var(--green-soft); outline-offset: 2px; border-radius: 2px; }
+.volver__sub { color: var(--muted); font-weight: 400; }
