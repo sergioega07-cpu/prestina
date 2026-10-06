@@ -496,26 +496,83 @@ h2 {
   .closing-inner { max-width: 40rem; }
 }
 
-/* «Volver a JINSEI»: franja discreta arriba (en el flujo, no tapa el header ni los CTA).
-   Solo existe si volver.js la agrega (visita desde ?desde=jinsei). */
-.volver {
-  background: #e8e6dc;
-  border-bottom: 1px solid var(--line);
-}
-.volver a {
+
+/* Botón maestro JINSEI (siempre visible): monograma JS casi negro, quieto; respira solo su halo de humo.
+   ::before = bruma ahumada que late (opacity + scale, 5 s); ::after = anillo de humo que se abre y se disuelve.
+   Con «reducir movimiento»: solo opacidad, anillo quieto. */
+.header-actions {
   display: flex;
   align-items: center;
-  gap: 0.45rem;
-  width: min(1080px, calc(100% - 2rem));
-  min-height: 36px;
-  margin: 0 auto;
-  color: var(--green-soft);
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
+  gap: 0.75rem;
+  flex: none;
+}
+.jinsei-js {
+  position: relative;
+  isolation: isolate;
+  flex: none;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
   text-decoration: none;
 }
-.volver a:hover { color: var(--green); }
-.volver a:hover, .volver a:focus-visible { text-decoration: underline; text-underline-offset: 3px; }
-.volver a:focus-visible { outline: 2px solid var(--green-soft); outline-offset: 2px; border-radius: 2px; }
-.volver__sub { color: var(--muted); font-weight: 400; }
+.jinsei-js::before,
+.jinsei-js::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+.jinsei-js::before {
+  width: 58px;
+  height: 58px;
+  margin: -29px 0 0 -29px;
+  background: radial-gradient(closest-side,
+    rgba(242, 241, 235, 0.95) 0%, rgba(242, 241, 235, 0.7) 30%,
+    rgba(29, 27, 24, 0.16) 58%, rgba(29, 27, 24, 0.06) 78%, rgba(29, 27, 24, 0) 100%);
+  animation: jsSmoke 5s ease-in-out infinite;
+}
+.jinsei-js::after {
+  width: 38px;
+  height: 38px;
+  margin: -19px 0 0 -19px;
+  border: 1px solid rgba(29, 27, 24, 0.28);
+  box-shadow: 0 0 10px rgba(29, 27, 24, 0.12);
+  opacity: 0;
+  animation: jsSmokeRing 5s ease-out infinite;
+}
+.jinsei-js img {
+  position: relative;
+  display: block;
+  width: auto;
+  height: 30px;
+  opacity: 0.92;
+  transition: opacity 0.3s, filter 0.3s;
+}
+.jinsei-js:hover img,
+.jinsei-js:focus-visible img {
+  opacity: 1;
+  filter: drop-shadow(0 0 6px rgba(29, 27, 24, 0.28));
+}
+.jinsei-js:active img { opacity: 0.7; }
+.jinsei-js:focus-visible { outline: 2px solid var(--green-soft); outline-offset: 4px; }
+@keyframes jsSmoke { 0%, 100% { opacity: 0.6; transform: scale(0.9); } 50% { opacity: 1; transform: scale(1.1); } }
+@keyframes jsSmokeRing { 0% { opacity: 0; transform: scale(0.8); } 22% { opacity: 0.55; } 100% { opacity: 0; transform: scale(1.65); } }
+@keyframes jsSmokeFade { 0%, 100% { opacity: 0.6; } 50% { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+  .jinsei-js::before { animation-name: jsSmokeFade; }
+  .jinsei-js::after { animation: none; opacity: 0.25; transform: scale(1.2); }
+  .jinsei-js img { transition: none; }
+}
+/* Pantallas angostas: todo entra junto a «PRESTINA / WACACO» */
+@media (max-width: 400px) {
+  .header-actions { gap: 0.4rem; }
+  .jinsei-js img { height: 28px; }
+  .header-cta { padding: 0.55rem 0.8rem; font-size: 0.8rem; }
+  .wordmark { letter-spacing: 0.12em; }
+}

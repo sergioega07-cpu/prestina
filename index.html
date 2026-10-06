@@ -11,11 +11,15 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Si llegas desde JINSEI (?desde=jinsei) agrega arriba «← Volver a JINSEI»; sin el parámetro no hace nada -->
-  <script src="volver.js"></script>
   <header class="site-header">
     <a class="wordmark" href="#inicio">PRESTINA<span> / WACACO</span></a>
-    <a class="header-cta" href="https://wa.me/56951774751?text=Hola%2C%20quiero%20reservar%20la%20Prestina">Reserva la tuya</a>
+    <div class="header-actions">
+      <!-- Botón maestro JINSEI: monograma JS oscuro con halo de humo -->
+      <a class="jinsei-js" href="https://sergioega07-cpu.github.io/jinsei-colab/inicio/" aria-label="Ir a JINSEI">
+        <img src="assets/jinsei-js-dark.svg" alt="" width="103" height="215" decoding="async">
+      </a>
+      <a class="header-cta" href="https://wa.me/56951774751?text=Hola%2C%20quiero%20reservar%20la%20Prestina">Reserva la tuya</a>
+    </div>
   </header>
 
   <main id="inicio">
